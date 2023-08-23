@@ -1,0 +1,110 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="container">
+        <div class="content">
+            <form id="adddet">
+                <p>Permanent Address : </p>
+                <div class="user-details">
+                    <div class="input-box">
+                        <input type="text" placeholder="Address Line 1" id="pAddressLine1" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="Address Line 2" id="pAddressLine2">
+                    </div>
+                    <div class="input-box">
+                        <input type="number" placeholder="Zip Code" id="pZipcode" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="City" id="pCity" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="State" id="pState" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="country" id="pCountry" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="checkBox" onclick="autoFilAddress()"> Same as permanent address
+                </div>
+                <p>Present Address : </p>
+                <div class="user-details">
+                    <div class="input-box">
+                        <input type="text" placeholder="Address Line 1" id="curAddressLine1" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="Address Line 2" id="curAddressLine2">
+                    </div>
+                    <div class="input-box">
+                        <input type="number" placeholder="Zip Code" id="curZipcode" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="City" id="curCity" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="State" id="curState" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="country" id="curCountry" required>
+                    </div>
+                </div>
+
+
+                <p>Family Information (Parents,Brothers,Sisters,Spouse and Children) : </p>
+                <table id="mytable">
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Relationship</th>
+                        <th>Age</th>
+                    </tr>
+                    <tr>
+                        <td><input type=checkbox></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="number"></td>
+                    </tr>
+                </table>
+                <br>
+                <input type=button class="b" value="Add new row" onclick=row()>
+                <input type=button class="b" value="Delete selected rows" onclick=del()>
+
+                <hr>
+
+
+                <table id="langtable">
+                    <tr>
+                        <th></th>
+                        <th>Language</th>
+                        <th>Read</th>
+                        <th>Write</th>
+                        <th>Speak</th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>English</td>
+                        <td class="checkbox-group"><label><input type="checkbox" name="englishRead"></label></td>
+                        <td class="checkbox-group"><label><input type="checkbox" name="englishWrite"> </label></td>
+                        <td class="checkbox-group"><label><input type="checkbox" name="englishSpeak"></label></td>
+                    </tr>
+                </table>
+
+                <input type=button class="b" value="Add new row" onclick=langrow()>
+                <input type=button class="b" value="Delete selected rows" onclick=del()>
+                <hr>
+                <div class="button">
+                    <input type="submit" value="Save and Continue">
+                </div>
+            </form>
+        </div>
+
+    </div>
+      <script>
+document.getElementById("adddet").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    window.location.href = "http://localhost:5149/Home/EducationalDetails"; 
+});
+</script>

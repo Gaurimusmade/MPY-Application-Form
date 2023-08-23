@@ -1,0 +1,97 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="container">
+        <div class="content">
+            <form id="pasdet">
+
+
+                <p>Passport Details(If Available) :</p>
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Number :</span>
+                        <input type="number" placeholder="Enter number">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Date of Issue :</span>
+                        <input type="date">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Date of Expiry</span>
+                        <input type="date">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Place of Issue</span>
+                        <input type="text" placeholder="Enter place of issue">
+                    </div>
+                </div>
+
+                <div class="visa-details">
+                    <input type="radio" name="visa" id="dot-1">
+                    <input type="radio" name="visa" id="dot-2">
+                    <span class="details employment_d">Do you have a valid VISA?</span>
+                    <div class="category">
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="visa">Yes</span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="visa">No</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="travel-details">
+                    <input type="radio" name="travel" id="dot-3">
+                    <input type="radio" name="travel" id="dot-4">
+                    <span class="details employment_d">Are you open to travel to the USA/Sri Lanka on work for a period
+                        of 6 months/ less during a year?</span>
+                    <div class="category">
+                        <label for="dot-3">
+                            <span class="dot three"></span>
+                            <span class="travel">Yes</span>
+                        </label>
+                        <label for="dot-4">
+                            <span class="dot four"></span>
+                            <span class="travel">No</span>
+                        </label>
+                    </div>
+                </div>
+                <p>Please name two known contacts who could be friends / co-workers whom you would like to recommend for
+                    Employment at MPY TECHNOLOGIES</p>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Current Company</th>
+                        <th>E-mail address</th>
+                        <th>Telephone</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="email"></td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="email"></td>
+                        <td><input type="number"></td>
+                    </tr>
+                </table>
+                <a href="">
+                <div class="button">
+                    <input type="submit" value="Save and Continue">
+                </div>
+                </a>
+            </form>
+        </div>
+    </div>
+      <script>
+document.getElementById("pasdet").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    window.location.href = "http://localhost:5149/Home/CompanyDetails"; 
+});
+</script>

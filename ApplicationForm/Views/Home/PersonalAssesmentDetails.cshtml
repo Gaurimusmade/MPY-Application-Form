@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+    <div class="container">
+        <p>PERSONAL ASSESMENT:<br>
+            Please put down in five succinct points as what you consider your strengths and weaknesses.</p>
+    <form id="peradet">
+    <table>
+        <tr><th>Sr.No</th><th>STRENGTHS</th></tr>
+        <tr><td>1</td><td><input type="text"></td></tr>
+        <tr><td>2</td><td><input type="text"></td></tr>
+        <tr><td>3</td><td><input type="text"></td></tr>
+        <tr><td>4</td><td><input type="text"></td></tr>
+        <tr><td>5</td><td><input type="text"></td></tr>
+    </table>
+    <table>
+        <tr><th>Sr.No</th><th>WEAKNESE</th></tr>
+        <tr><td>1</td><td><input type="text"></td></tr>
+        <tr><td>2</td><td><input type="text"></td></tr>
+        <tr><td>3</td><td><input type="text"></td></tr>
+        <tr><td>4</td><td><input type="text"></td></tr>
+        <tr><td>5</td><td><input type="text"></td></tr>
+    </table>
+    <hr>
+     <P>Which Sports/Hobby/Activity provides you immense satisfaction?state briefly as to why?</P>
+     <textarea rows="5" cols="80"></textarea>
+     <p>What is your short term goals?</p>
+     <textarea rows="8" cols="80"></textarea>
+     <p>What is your long term goals?</p>
+     <textarea rows="8" cols="80"></textarea>
+     <p>Have you ever attended an interview at any of the MPY TECHNOLOGIES Offices across the globe in the 
+        last 6 months?Yes/No(If yes,mention the details)</p>
+        <textarea rows="5" cols="80"></textarea>
+        <a href="">
+        <div class="button">
+            <input type="submit" value="Save and Continue">
+          </div>
+          </a>
+    </form>
+    </div>
+      <script>
+document.getElementById("peradet").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    window.location.href = "http://localhost:5149/Home/DeclarationAuth"; 
+});
+</script>
